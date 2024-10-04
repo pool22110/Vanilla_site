@@ -11,12 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- /*/////// font awesome 4 cdn///*/ -->
   </head>
   <body>
     <section class="header">
       <nav>
         <a href="index.html"><img src="eduford_img/logo.png" alt="logo" /></a>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()" id="closeBtn"></i>
           <ul>
             <li><a href="">HOME</a></li>
             <li><a href="">ABOUT</a></li>
@@ -25,8 +29,33 @@
             <li><a href="">CONTACT</a></li>
           </ul>
         </div>
+        <i class="fa fa-bars" onclick="showMenu()" id="MenuBtn"></i>
       </nav>
-      
+      <div class="text-box">
+        <h1>Worlds Biggest University</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, earum
+          br hic esse quam minus facilis vitae eligendi! Incidunt, eius
+          adipisci.
+        </p>
+        <a href="" class="hero-btn" >Visit us too know more doubt</a>
+      </div>
     </section>
+
+    <!-- JavaScript to Toggle menu -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      // var closeBtn = document.getElementById("navLinks");
+      // var MenuBtn = document.getElementById("navLinks");
+      
+      function showMenu(){
+        navLinks.style.right = "0";
+        console.log("hiii")
+      }
+      function hideMenu(){
+        navLinks.style.right = "-200px";
+        console.log("gggg")
+      }
+    </script>
   </body>
 </html>
